@@ -91,8 +91,8 @@ static ngx_http_module_t  ngx_http_insert_filter_module_ctx = {
 
 ngx_module_t  ngx_http_insert_filter_module = {
     NGX_MODULE_V1,
-    &ngx_http_insert_filter_module_ctx,      /* module context */
-    ngx_http_insert_filter_commands,                                  /* module directives */
+    &ngx_http_insert_filter_module_ctx,    /* module context */
+    ngx_http_insert_filter_commands,       /* module directives */
     NGX_HTTP_MODULE,                       /* module type */
     NULL,                                  /* init master */
     NULL,                                  /* init module */
@@ -107,7 +107,7 @@ ngx_module_t  ngx_http_insert_filter_module = {
 static ngx_int_t
 ngx_http_insert_body_filter(ngx_http_request_t *r, ngx_chain_t *in)
 {
-	ngx_http_insert_filter_loc_conf_t *conf = NULL;
+    ngx_http_insert_filter_loc_conf_t *conf = NULL;
     ngx_chain_t **ll;
     ngx_chain_t *cl;
     ngx_chain_t *nl;
